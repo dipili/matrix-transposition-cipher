@@ -1,0 +1,8 @@
+«C⁠+⁠+ is designed with a specific hardware model in mind, and this model has minimalistic requirements. This has made it possible to port C⁠+⁠+ tools and code very broadly, as machines built today, from nanocomputers to number-crunching behemoths, are all designed to implement this hardware model.
+There are one or more C⁠+⁠+ tool chains available on almost all computing platforms.9 C⁠+⁠+ is the only high-level language alternative available on all of the top mobile platforms.10
+Not only are the tools available, but it is possible to write portable code that can be used on all these platforms without rewriting.
+With the consideration of tool chains, we have moved from language features to factors outside of the language itself. But these factors have important engineering considerations. Even a language with perfect syntax and semantics wouldn’t have any practical value if we couldn’t build it for our target platform.
+In order for an engineering organization to seriously consider significant adoption of a language, it needs to consider availability of tools (including analyzers and other non-build tools), experienced engineers, software libraries, books and instructional material, troubleshooting support, and training opportunities.
+Extra-language factors, such as the installed[…]»
+
+Отрывок из книги: Jon Kalb, Gašper Ažman. «C++ Today: The Beast Is Back». iBooks. 
