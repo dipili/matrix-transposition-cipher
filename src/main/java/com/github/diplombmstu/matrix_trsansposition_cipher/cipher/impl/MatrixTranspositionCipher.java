@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * TODO add comment
+ * Block cipher impl for matrix transposition ciphering algorithm
  */
 public class MatrixTranspositionCipher implements Cipher<MatrixKey>
 {
@@ -48,6 +48,7 @@ public class MatrixTranspositionCipher implements Cipher<MatrixKey>
                 }
             }
         }
+
         return result;
     }
 
