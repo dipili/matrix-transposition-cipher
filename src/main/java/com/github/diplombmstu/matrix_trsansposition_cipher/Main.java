@@ -1,5 +1,7 @@
 package com.github.diplombmstu.matrix_trsansposition_cipher;
 
+import com.github.diplombmstu.matrix_trsansposition_cipher.cipher.DataCipher;
+import com.github.diplombmstu.matrix_trsansposition_cipher.cipher.impl.MatrixKey;
 import com.github.diplombmstu.matrix_trsansposition_cipher.cipher.impl.MatrixKeys;
 import com.github.diplombmstu.matrix_trsansposition_cipher.cipher.impl.MatrixTranspositionDataCipher;
 
@@ -17,9 +19,8 @@ public class Main
         RandomAccessFile outputFile = new RandomAccessFile("samples/encrypted.txt", "rw");
         FileChannel outChannel = outputFile.getChannel();
 
-        MatrixTranspositionDataCipher dataCipher = new MatrixTranspositionDataCipher();
+        DataCipher<MatrixKey> dataCipher = new MatrixTranspositionDataCipher();
         dataCipher.encrypt(inChannel, outChannel, MatrixKeys.loadKeyFromFile("samples/key.json"));
-
 
         RandomAccessFile decryptedOutputFile = new RandomAccessFile("samples/decrypted.txt", "rw");
         FileChannel decryptedOutChannel = decryptedOutputFile.getChannel();
