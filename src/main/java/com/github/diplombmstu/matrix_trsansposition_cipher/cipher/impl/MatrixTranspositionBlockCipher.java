@@ -14,19 +14,19 @@ public class MatrixTranspositionBlockCipher implements BlockCipher<MatrixKey>
     public byte[] encryptBlock(byte[] block, MatrixKey key)
     {
         List<Byte>[][] matrix = createCipherMatrix(block, key, Direction.Default);
-        return shuffleBlock(block, key, matrix, Direction.Default);
+        return shuffle(matrix, key, Direction.Default);
     }
 
     @Override
     public byte[] decryptBlock(byte[] block, MatrixKey key)
     {
         List<Byte>[][] matrix = createCipherMatrix(block, key, Direction.Reverse);
-        return shuffleBlock(block, key, matrix, Direction.Reverse);
+        return shuffle(matrix, key, Direction.Reverse);
     }
 
-    private byte[] shuffleBlock(byte[] block, MatrixKey key, List<Byte>[][] matrix, Direction direction)
+    private byte[] shuffle(List<Byte>[][] matrix, MatrixKey key, Direction direction)
     {
-        byte[] result = new byte[block.length];
+        byte[] result = new byte[key.getS() * key.getM() * key.getP()];
 
         int it = 0;
 
