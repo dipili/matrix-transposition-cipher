@@ -1,6 +1,6 @@
 package com.github.diplombmstu.matrix_trsansposition_cipher.cipher.impl;
 
-import com.github.diplombmstu.matrix_trsansposition_cipher.cipher.Cipher;
+import com.github.diplombmstu.matrix_trsansposition_cipher.cipher.BlockCipher;
 import com.github.diplombmstu.matrix_trsansposition_cipher.cipher.DataCipher;
 
 import java.io.IOException;
@@ -17,7 +17,7 @@ public class MatrixTranspositionDataCipher implements DataCipher<MatrixKey>
     public void encrypt(ReadableByteChannel readableByteChannel, WritableByteChannel writableByteChannel, MatrixKey key)
             throws IOException
     {
-        Cipher<MatrixKey> cipher = new MatrixTranspositionCipher();
+        BlockCipher<MatrixKey> cipher = new MatrixTranspositionBlockCipher();
 
         int blockSize = key.getM() * key.getS() * key.getP();
         ByteBuffer readBuffer = ByteBuffer.allocate(blockSize);
@@ -45,7 +45,7 @@ public class MatrixTranspositionDataCipher implements DataCipher<MatrixKey>
     public void decrypt(ReadableByteChannel readableByteChannel, WritableByteChannel writableByteChannel, MatrixKey key)
             throws IOException
     {
-        Cipher<MatrixKey> cipher = new MatrixTranspositionCipher();
+        BlockCipher<MatrixKey> cipher = new MatrixTranspositionBlockCipher();
 
         int blockSize = key.getM() * key.getS() * key.getP();
         ByteBuffer readBuffer = ByteBuffer.allocate(blockSize);

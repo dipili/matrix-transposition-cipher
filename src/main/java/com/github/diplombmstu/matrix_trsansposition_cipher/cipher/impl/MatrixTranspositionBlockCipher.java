@@ -1,6 +1,6 @@
 package com.github.diplombmstu.matrix_trsansposition_cipher.cipher.impl;
 
-import com.github.diplombmstu.matrix_trsansposition_cipher.cipher.Cipher;
+import com.github.diplombmstu.matrix_trsansposition_cipher.cipher.BlockCipher;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * Block cipher impl for matrix transposition ciphering algorithm
  */
-public class MatrixTranspositionCipher implements Cipher<MatrixKey>
+public class MatrixTranspositionBlockCipher implements BlockCipher<MatrixKey>
 {
     @Override
     public byte[] encryptBlock(byte[] block, MatrixKey key)

@@ -1,7 +1,7 @@
 package matrix_trsansposition_cipher.cipher.impl;
 
 import com.github.diplombmstu.matrix_trsansposition_cipher.cipher.impl.MatrixKey;
-import com.github.diplombmstu.matrix_trsansposition_cipher.cipher.impl.MatrixTranspositionCipher;
+import com.github.diplombmstu.matrix_trsansposition_cipher.cipher.impl.MatrixTranspositionBlockCipher;
 import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
@@ -12,7 +12,7 @@ public class TestMatrixTranspositionCipher
     @Test
     public void encryptBlockMustReturnValidValue()
     {
-        MatrixTranspositionCipher cipher = new MatrixTranspositionCipher();
+        MatrixTranspositionBlockCipher cipher = new MatrixTranspositionBlockCipher();
         MatrixKey key = new MatrixKey();
         key.setM(2);
         key.setS(4);
@@ -25,7 +25,7 @@ public class TestMatrixTranspositionCipher
     @Test
     public void decryptBlockMustReturnValidValue()
     {
-        MatrixTranspositionCipher cipher = new MatrixTranspositionCipher();
+        MatrixTranspositionBlockCipher cipher = new MatrixTranspositionBlockCipher();
         MatrixKey key = new MatrixKey();
         key.setM(2);
         key.setS(4);
